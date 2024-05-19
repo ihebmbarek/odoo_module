@@ -1,0 +1,13 @@
+<odoo>
+    <data>
+        <menuitem id="main_school_management_menu" name="School Management"/>
+
+        <menuitem id="school_management_student_menu" name="Students" parent="main_school_management_menu" action="student_action"/>
+
+        <menuitem id="school_management_professor_menu" name="Professors" parent="main_school_management_menu" action="professor_action"/>
+
+        <menuitem id="school_management_staff_menu" name="Staff" parent="main_school_management_menu" action="staff_action"/>
+
+        <menuitem id="school_management_parent_menu" name="Parents" parent="main_school_management_menu" action="parent_action"/>
+    </data>
+</odoo>

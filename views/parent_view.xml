@@ -1,0 +1,23 @@
+<odoo>
+    <record id="view_form_parent" model="ir.ui.view">
+        <field name="name">parent.form</field>
+        <field name="model">school_management.parent</field>
+        <field name="arch" type="xml">
+            <form string="Parent">
+                <sheet>
+                    <group>
+                        <field name="user_id" options="{'no_create': True}"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="parent_action" model="ir.actions.act_window">
+        <field name="name">Parents</field>
+        <field name="res_model">school_management.parent</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="school_management_parent_menu" name="Parents" parent="main_school_management_menu" action="parent_action"/>
+</odoo>

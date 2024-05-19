@@ -1,0 +1,23 @@
+<odoo>
+    <record id="view_form_professor" model="ir.ui.view">
+        <field name="name">professor.form</field>
+        <field name="model">school_management.professor</field>
+        <field name="arch" type="xml">
+            <form string="Professor">
+                <sheet>
+                    <group>
+                        <field name="user_id" options="{'no_create': True}"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="professor_action" model="ir.actions.act_window">
+        <field name="name">Professors</field>
+        <field name="res_model">school_management.professor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="school_management_professor_menu" name="Professors" parent="main_school_management_menu" action="professor_action"/>
+</odoo>

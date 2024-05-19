@@ -1,0 +1,24 @@
+<odoo>
+    <record id="view_form_student" model="ir.ui.view">
+        <field name="name">student.form</field>
+        <field name="model">school_management.student</field>
+        <field name="arch" type="xml">
+            <form string="Student">
+                <sheet>
+                    <group>
+                        <field name="user_id" options="{'no_create': True}"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="student_action" model="ir.actions.act_window">
+        <field name="name">Students</field>
+        <field name="res_model">school_management.student</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="main_school_management_menu" name="School Management"/>
+    <menuitem id="school_management_student_menu" name="Students" parent="main_school_management_menu" action="student_action"/>
+</odoo>

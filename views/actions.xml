@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <record id="student_action" model="ir.actions.act_window">
+            <field name="name">Students</field>
+            <field name="res_model">school_management.student</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="professor_action" model="ir.actions.act_window">
+            <field name="name">Professors</field>
+            <field name="res_model">school_management.professor</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="staff_action" model="ir.actions.act_window">
+            <field name="name">Staff</field>
+            <field name="res_model">school_management.staff</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="parent_action" model="ir.actions.act_window">
+            <field name="name">Parents</field>
+            <field name="res_model">school_management.parent</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

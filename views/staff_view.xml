@@ -1,0 +1,23 @@
+<odoo>
+    <record id="view_form_staff" model="ir.ui.view">
+        <field name="name">staff.form</field>
+        <field name="model">school_management.staff</field>
+        <field name="arch" type="xml">
+            <form string="Staff">
+                <sheet>
+                    <group>
+                        <field name="user_id" options="{'no_create': True}"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="staff_action" model="ir.actions.act_window">
+        <field name="name">Staff</field>
+        <field name="res_model">school_management.staff</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="school_management_staff_menu" name="Staff" parent="main_school_management_menu" action="staff_action"/>
+</odoo>
